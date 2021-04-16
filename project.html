@@ -9,10 +9,20 @@
         <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
         <script src="https://d3js.org/d3-scale.v3.min.js"></script>
         <style>
-            .rating          { grid-area: rating;  }
-            .rating-graph    { grid-area: graph-r; }
+            .rating          { grid-area: rating;   }
+            .rating-graph    { grid-area: graph-r;
+                               display: flex;
+                               align-content: center;
+                               margin-left: auto;
+                               margin-right: auto; }
+
             .bandwidth       { grid-area: band; }
-            .bandwidth-graph { grid-area: band-g; }
+
+            .bandwidth-graph { grid-area: band-g; 
+                               display: flex;
+                               align-content: center;
+                               margin-left: auto;
+                               margin-right: auto; }
 
             .asd             { grid-area: asd; }
             .asd-graph       { grid-area: asd-g; }
@@ -27,10 +37,11 @@
                 'asd    asd     asd-g     asd-g   asd-g  asd-g  asd-g   asd-g'
                 'info   info    info    info    info   info   info    info';
               grid-gap: 1px;
-              background-color: black;
+              background-color:rgb(243, 243, 241);
               padding: 1px;
               height: 100vh;
               grid-template-rows: 33vh 33vh 34vh;
+              
             }
             
             .grid-container > div 
@@ -95,31 +106,30 @@
     </head>
     <body>
         <div class="grid-container">
-            <div class="rating">
-                <p>Rating</p>
+            <div class="rating" style="border-width: 7px; border-style: outset;">
+                <p>視聴率</p>
                     <div class = "div-scrollbar">
                         <ul></ul>
                     </div>
             </div>
-            <div class="rating-graph">
+            <div class="rating-graph" style="border-width: 7px; border-style: outset;">
             </div>
-            <div class="bandwidth">
-                <p>Bandwidth</p>
+            <div class="bandwidth" style="border-width: 7px; border-style: outset;">
+                <p>帯域</p>
                 <ul></ul>
             </div> 
-            <div class="bandwidth-graph">
-                <svg></svg>
+            <div class="bandwidth-graph" style="border-width: 7px; border-style: outset;">
             </div>  
-            <div class="asd">
+            <div class="asd" style="border-width: 7px; border-style: outset;">
                 <p>ASD</p>
                 <ul></ul>
             </div>
-            <div class="asd-graph">
-                <p>Graph</p>
+            <div class="asd-graph" style="border-width: 7px; border-style: outset;">
+                <p>グラフ</p>
             </div>
-            <div class="info">
-                <p>Table</p>
-                <div class = "div-scrollbar">
+            <div class="info" style="border-width: 7px; border-style: outset;">
+                <p>テーブル</p>
+                <div class = "div-scrollbar" >
                 </div>
             </div>
         </div> 
